@@ -1,0 +1,287 @@
+= Open Source Tools for OER
+:stem:
+
+Ryan Tolboom
+
+_New Jersey Institute of Technology_
+
+== Philosophy
+
+[quote,Mahatma Gandhi]
+The means are the ends in the making.
+
+== Free Software
+
+* Freedom to: run, copy, distribute, study, change, and improve
+* Open source is a precondition to this
+* Equitable and inclusive by design
+
+[.columns.is-vcentered]
+=== A little bit of history
+
+
+[.column]
+image::bell_labs.jpg[]
+
+[.column]
+* NJ is the birthplace of UNIX!
+* Distributed for free (but couldn't be modified)
+* _Good_ documentation and collaboration made _great_ software
+
+[.columns.is-vcentered]
+=== Linux
+
+[.column]
+* Most popular operating system kernel 
+* Largest open source project ever
+* Over 14,000 developers
+* Powering the cloud, in your pocket, and orbiting the earth!
+
+[.column]
+image::tux.png[]
+
+=== How is it done?
+
+* Version control: cvs, svn, git
+* Public mailing lists, Discord channels
+* Hosting/Project Management: SourceForge, GitHub, SourceHut
+* Open conventions and codes of conduct
+
+=== Emergent Patterns
+
+* Steep learning curve, lots of documentation
+* Participatory, inclusive communities
+* WYSIWYM (what you see is what you mean)
+* DRY (don't repeat yourself)
+* Separate content and style 
+
+== Open Source Tools
+
+== Text Processing and Publishing
+
+* latexmath:[\LaTeX]
+* Markdown
+* Asciidoctor
+
+[.columns]
+=== latexmath:[\LaTeX]
+
+[.column]
+[latexmath] 
+++++
+\nabla \cdot E = \frac{\rho}{\epsilon_o} \\
+\nabla \cdot B = 0 \\
+\nabla \times E = -\frac{\partial B}{\partial t} \\
+\nabla \times B = \mu_o(J + \epsilon_o \frac{\partial E}{\partial t})
+++++
+
+[.column]
+* Oldest, but still very common
+* Meant for the printed page
+* Beautiful math notation
+
+=== Example
+
+[source, latex]
+----
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\title{Simple Sample}
+\author{My Name}
+\date{\today}
+
+\begin{document}
+    \maketitle
+    
+    \section{Hello World!}
+    
+    \textbf{Hello World!} Today I am learning \LaTeX.
+     \LaTeX{} is a great program for writing math. I can write in line math such as $a^2+b^2=c^2$ %$ tells LaTexX to compile as math
+     . I can also give equations their own space: 
+    \begin{equation}
+    \gamma^2+\theta^2=\omega^2
+    \end{equation}
+    If I do not leave any blank lines \LaTeX{} will continue  this text without making it into a new paragraph.  Notice how there was no indentation in the text after equation (1).  
+    Also notice how even though I hit enter after that sentence and here $\downarrow$
+     \LaTeX{} formats the sentence without any break.  Also   look  how      it   doesn't     matter          how    many  spaces     I put     between       my    words.
+    
+    For a new paragraph I can leave a blank space in my code. 
+
+\end{document}
+----
+https://guides.nyu.edu/LaTeX/sample-document[source]
+
+[.columns.is-vcentered]
+=== Markdown
+
+[.column]
+* Simple to write and read
+* Currently very popular
+* Mainly intended for HTML output
+
+[.column]
+image::markdown.png[]
+
+=== Example
+
+[source, markdown]
+----
+# Hello World!
+
+Markdown is designed to be simple to read even if it isn't converted to HTML.
+If you want a new paragraph, you can make one by putting in a blank line.
+
+Like this!
+
+Lists are supported too:
+* Unordered lists (like this)
+* And ordered ones (with a number and a period)
+----
+
+[.columns.is-vcentered]
+=== Asciidoctor
+
+[.column]
+image::asciidoctor.png[]
+
+[.column]
+* Consistent and standardized
+* Great functionality
+* Still readable
+
+=== Example
+
+[source, asciidoc]
+----
+= Headings start with equals signs
+
+Paragraphs are still separated by newlines
+
+https://asciidoctor.org[Links are unambiguous]
+
+[source,python]
+print("Code blocks are easy")
+----
+
+=== Commonalities
+
+* Write plain text but _generate_ HTML, PDF, ePub, etc.
+* Reach Goal: Readability (required for collaboration)
+* Reach Goal: Open and documented standards and tools
+
+== Collaborative Editing
+
+* Concurrent Versions System (CVS)
+* Subversion (SVN)
+* Git
+
+[.columns.is-vcentered]
+=== cvs
+
+[.column]
+[plantuml]
+....
+@startuml
+rectangle "Repository" as repo
+rectangle "Working Copy 1" as wc1
+rectangle "Working Copy 2" as wc2
+rectangle "Working Copy 3" as wc3
+
+repo --> wc1 : update
+wc1 --> repo : commit
+repo --> wc2 : update
+wc2 --> repo : commit
+repo --> wc3 : update
+wc3 --> repo : commit
+@enduml
+....
+
+[.column]
+* Designed to work with students on large projects
+* Works with directories full of text files
+* Centralized by design
+
+[.columns.is-vcentered]
+=== Subversion 
+
+[.column]
+* Similar concept to CVS
+* Many optimizations
+* More options
+
+[.column]
+image::svn.svg[]
+
+[.columns.is-vcentered]
+=== Git
+
+[.column]
+image::git.png[]
+
+[.column]
+* Written by Linus Torvalds
+* _Distributed_ version control
+* Don't do things the CVS way!
+
+=== Commonalities
+
+* Not real time!
+* Command line programs
+* Track changes and be reversible
+
+== Hosting / Project Management
+
+* SourceForge
+* GitHub
+* SourceHut
+
+[.columns.is-vcentered]
+=== SourceForge
+
+[.column]
+image::sf.png[]
+
+[.column]
+* Free hosting for open source projects
+* Revision control system / Bug Tracking / Wiki
+* Easier collaboration than mailing lists
+
+[.columns.is-vcentered]
+=== GitHub
+
+[.column]
+* Emphasis on git
+* Continuous Integration/Continuous Deployment
+* Fork based pull requests (PRs)
+
+[.column]
+image::github.png[]
+
+=== SourceHut
+
+image::sourcehut.png[]
+
+* Opinionated: https://man.sr.ht/~renerocksai/migrate-to-sourcehut/PR.md[back to the email workflow]
+* Simple: no JavaScript, basic layout
+* Open source, participatory
+
+== Examples
+
+=== https://web.njit.edu/~rxt1077/security[Computer Systems Security: Planning for Success]
+
+* Collaboration with OTC
+* Asciidoctor, git, GitHub, svgbob, web hosted at NJIT
+* https://github.com/rxt1077/it230[GitHub repo]
+
+=== https://web.njit.edu/~rxt1077/systems_integration/[Systems Integration: A Project Based Approach]
+
+* asciidoctor, git, GitHub, plantuml, web hosted at NJIT
+* https://github.com/rxt1077/it940[GitHub repo]
+
+=== https://web.njit.edu/~rxt1077/open_source_for_oer/example[Our OER Textbook!]
+
+* It's the one we collaborated on, remember?
+* Asciidoctor, git, GitHub, web hosted at NJIT
+* Take a look and participate!

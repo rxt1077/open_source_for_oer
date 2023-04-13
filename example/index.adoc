@@ -1,0 +1,32 @@
+= Open Source Tools for OER
+:toc:
+
+== Introduction
+
+This is an example text to demonstrate collaborative OER generation using Open Source tools.
+
+== Fork me on GitHub!
+
+You can find a https://github.com/rxt1077/open_source_for_oer[git repo for this text here].
+Make sure you have https://git-scm.com/download/[git installed] and then https://docs.github.com/en/get-started/quickstart/contributing-to-projects[fork this repo and create a local clone].
+
+== Add your $0.02
+
+Inside your local repo create a new file in `example` with your name and a little bit of information about yourself in https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[AsciiDoc syntax].
+Here's mine:
+
+[source,asciidoc]
+----
+include::ryan_tolboom.adoc[]
+----
+
+== Commit, Push, and Make a PR!
+
+https://docs.github.com/en/get-started/quickstart/contributing-to-projects#making-and-pushing-changes[Commit your changes and push them to your forked repo.]
+https://docs.github.com/en/get-started/quickstart/contributing-to-projects#making-and-pushing-changes[Finally, make a PR.]
+I'll merge your PR and redeploy the text.
+Don't worry you can't break anything, so feel free to experiment.
+
+== Contributers (so far)
+
+include::ryan_tolboom.adoc[leveloffset=2]

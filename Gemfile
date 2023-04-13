@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+
+gem 'asciidoctor'
+gem 'asciidoctor-diagram'
+gem 'asciidoctor-revealjs'
+gem 'rouge'
+gem 'webrick'
