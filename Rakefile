@@ -6,7 +6,7 @@ require 'webrick'
 outputdir = 'output'
 imagesdir = 'images'
 revealjs_theme = 'black'
-revealjsdir = 'https://cdn.jsdelivr.net/npm/reveal.js@3.9.2'
+revealjsdir = 'https://cdn.jsdelivr.net/npm/reveal.js@4.1.2'
 revealjs_customcss = 'custom.css'
 
 desc 'Cleans and sets up output/slides directory'

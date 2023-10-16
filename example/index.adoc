@@ -30,3 +30,5 @@ Don't worry you can't break anything, so feel free to experiment.
 == Contributers (so far)
 
 include::ryan_tolboom.adoc[leveloffset=2]
+include::mario_badilla.adoc[leveloffset=2]
+include::joergelp.adoc[leveloffset=2]

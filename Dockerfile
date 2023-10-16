@@ -1,4 +1,4 @@
-FROM "ruby:3.2.2"
+FROM ruby:3
 WORKDIR /docs
 COPY Gemfile /docs/
 RUN apt-get update

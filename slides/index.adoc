@@ -67,13 +67,10 @@ image::tux.png[]
 === latexmath:[\LaTeX]
 
 [.column]
-[latexmath] 
-++++
-\nabla \cdot E = \frac{\rho}{\epsilon_o} \\
-\nabla \cdot B = 0 \\
-\nabla \times E = -\frac{\partial B}{\partial t} \\
-\nabla \times B = \mu_o(J + \epsilon_o \frac{\partial E}{\partial t})
-++++
+latexmath:[\nabla \cdot E = \frac{\rho}{\epsilon_o}] +
+latexmath:[\nabla \cdot B = 0] + 
+latexmath:[\nabla \times E = -\frac{\partial B}{\partial t}] +
+latexmath:[\nabla \times B = \mu_o(J + \epsilon_o \frac{\partial E}{\partial t})]
 
 [.column]
 * Oldest, but still very common
@@ -279,6 +276,11 @@ image::sourcehut.png[]
 
 * asciidoctor, git, GitHub, plantuml, web hosted at NJIT
 * https://github.com/rxt1077/it490[GitHub repo]
+
+=== https://git-scm.com/book/en/v2[Pro Git] 
+
+* asciidoctor, git, GitHub, web hosted at the git website
+* https://github.com/progit/progit2[GitHub repo]
 
 === https://web.njit.edu/~rxt1077/open_source_for_oer/example[Our OER Textbook!]
 
